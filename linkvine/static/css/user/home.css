@@ -1,0 +1,359 @@
+.main-features h5 {
+    color: #3b3b3b;
+}
+
+.main-features img {
+    width: 15rem;
+}
+
+.img-wrapper {
+    height: 13rem;
+}
+
+#example-phone {
+    border: 10px solid black;
+    border-radius: 35px;
+}
+
+.mobile-feature h5 {
+    color: #495057;
+}
+
+.mobile-feature h1{
+    font-weight: 400;
+}
+
+.introduction-container {
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+}
+
+#intro-slogan {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+}
+
+#intro-sub {
+    font-size: 20px;
+    color: rgb(38, 50, 56);
+    padding-top: 1rem;
+}
+
+.btn-diamond {
+    background-color: #00b4ba;
+    color: white;
+    font-weight: 600;
+    height: 3rem;
+}
+
+.btn-success {
+    /*background: #93c47d !important;*/
+    background-color: #4caf50 !important;
+    /*color: #286731 !important;*/
+    color: #ffffff;
+    border: none;
+    height: 3.3rem;
+    transition: 0.25s;
+}
+
+.btn-success-outline {
+    background: none !important;
+    color: #286731 !important;
+    border: 1px solid #286731;
+    height: 3.3rem;
+    transition: 0.25s;
+}
+
+#btn-success-outline:hover {
+    text-decoration: none !important;
+}
+
+.btn-success:hover {
+    font-weight: 600;
+}
+
+.underline {
+    /*text-decoration: underline;*/
+    text-decoration-color: black;
+    color: #4caf50 !important;
+}
+
+.full-page-height {
+    height: 100%;
+    min-height: 100vh;
+}
+
+#get-started:hover {
+    text-decoration: none !important;
+}
+
+.media-wrapper {
+    /*box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;*/
+    /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 6rem;
+    border-radius: 20px;
+}
+
+.media-wrapper img {
+    width: 2.8rem;
+}
+
+.media-wrapper h2 {
+    font-weight: 300;
+}
+
+.text-lime {
+    color: #2aebc4;
+}
+
+.text-diamond {
+    color: #00b4ba;
+}
+
+.badge-apple {
+    background-color: #ff5722;
+    color: #ff5722;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-orange {
+    background-color: #ff8818;
+    color: #ff8818;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-grass {
+    background-color: #4caf50;
+    color: #4caf50;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-grape {
+    background-color: #9c27b0;
+    color: #9c27b0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-berry {
+    background-color: #3f51b5;
+    color: #3f51b5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-berry-light {
+    background-color: #03a9f4;
+    color: #03a9f4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+.badge-banana {
+    background-color: #ff9800;
+    color: #ff9800;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));
+    font-weight: 400;
+    width: 6rem;
+    text-align: center;
+}
+
+
+.square-green-dark {
+    height: 25px;
+    width: 25px;
+    background-color: #009688;
+    border-radius: 3px;
+    /*background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .9));*/
+}
+
+.square-green-medium {
+    height: 25px;
+    width: 25px;
+    background-color: #4caf50;
+    border-radius: 3px;
+
+}
+
+.square-green-light {
+    height: 25px;
+    width: 25px;
+    background-color: #8abb17;
+    border-radius: 3px;
+}
+
+.mobile-feature {
+    margin-top: 6.5rem;
+}
+
+.btn:hover, .btn:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+.btn {
+    /*--color: #ffa260;*/
+    /*--hover: #e5ff60;*/
+    --hover: #f6f7f9;
+}
+
+.btn-dark, .btn:focus {
+    border-color: var(--hover);
+    color: #ffffff;
+}
+
+.btn-dark {
+    background-color: #ededed !important;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #FFFFFF;
+    transition: 0.25s;
+}
+
+/** GALAXY S5 **/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+    #intro-slogan {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .introduction-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #intro-sub {
+        font-size: 1rem;
+    }
+
+    .intro-right img {
+        display: none;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .mobile-feature h1 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding-top:1rem;
+    }
+
+    .mobile-feature img{
+        margin:auto;
+    }
+
+    .media-wrapper h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .media-wrapper{
+        margin-top: 1rem;
+    }
+
+    .how h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .how img{
+        display: none;
+    }
+
+    footer h1{
+        font-size: 2rem;
+    }
+}
+
+/** PIXEL 2 **/
+@media only screen and (min-device-width: 411px) and (max-device-width: 731px) {
+     #intro-slogan {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .introduction-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #intro-sub {
+        font-size: 1rem;
+    }
+
+    .intro-right img {
+        display: none;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .mobile-feature h1 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding-top:1rem;
+    }
+
+    #mobile-feature-phone{
+        margin:1.8rem;
+    }
+
+    .media-wrapper h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .media-wrapper{
+        margin-top: 1rem;
+    }
+
+    .how h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .how img{
+        display: none;
+    }
+
+    footer h1{
+        font-size: 2rem;
+    }
+}
+

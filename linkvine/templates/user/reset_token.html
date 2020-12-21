@@ -1,0 +1,51 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/css/user/login.css">
+
+    <div class="contact" style="margin-top:3rem;margin-bottom: 19rem">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="margin-top:3.2rem;">
+                    <img class="img-fluid" src="/static/img/undraw_two_factor_authentication_namy.png">
+                </div>
+                <div class="col-md-6" style="margin-top:5rem">
+                    <h1 class="text-center" style="font-weight: 200">Reset Password</h1>
+                    <hr>
+                    <form class="needs-validation" method="POST" action="">
+                        {{ form.hidden_tag() }}
+
+                        <div class="form-group">
+                            {{ form.password.label(class="form-control-label mt-1") }}
+                            {% if form.password.errors %}
+                                {{ form.password(class="form-control is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.password(class="form-control") }}
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.confirm_password.label(class="form-control-label mt-1") }}
+                            {% if form.confirm_password.errors %}
+                                {{ form.confirm_password(class="form-control is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.confirm_password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.confirm_password(class="form-control") }}
+                            {% endif %}
+                        </div>
+
+                        {{ form.submit(class="btn btn-block my-3 btn-success") }}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

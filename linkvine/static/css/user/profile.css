@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-light-grey {
+    background: #ededed;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /*background-color: #2aebc4;*/
+    /*background: #11998e; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #38ef7d, #11998e); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #38ef7d, #11998e); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+}
+
+.main-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.link-box {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+    border-radius: 20px 20px 20px 20px !important;
+    background-color: white;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.btn-diamond {
+    background-color: #00b4ba;
+    color: white;
+    font-weight: 600;
+    height: 3rem;
+    border-radius: 20px !important;
+}
+
+.btn-grey {
+    background-color: #6c757d;
+    color: white;
+    font-weight: 600;
+    height: 3rem;
+    border-radius: 20px !important;
+}
+
+#link-box-title {
+    font-size: 1rem;
+}
+
+.text-lime {
+    /*color: #ffc107 !important;*/
+    color: #343a40 !important;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#profile_img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#username {
+    font-size: 1.3em;
+    padding-top: 1rem;
+    font-weight: 300;
+}
+
+.link-box-mobile {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+    border-radius: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 1.2rem;
+    padding: 1.4rem;
+    color: white;
+}
+
+.link-box-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+#mobile-device-link:hover {
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+#brand {
+    padding-top: 5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/** Galaxy s5 **/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+    #profile_img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+
+    #username {
+        font-size: 3rem;
+        padding-top: 1rem;
+        font-weight: 300;
+    }
+
+    .main-wrapper {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-left: 3rem;
+        padding-right:3rem;
+    }
+
+    #link-box-title {
+        font-size: 3rem;
+    }
+
+    .link-box-mobile {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+        border-radius: 55px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 2.3rem;
+        padding: 1.4rem;
+        color: white;
+    }
+
+    #brand {
+        padding-top: 6rem;
+        font-weight: 900;
+        font-size: 3.5rem;
+    }
+}
+

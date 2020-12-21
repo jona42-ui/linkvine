@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LINKVINE - Profile</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Fontawsome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/user/profile.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/user/user-customization.css">
+
+</head>
+{#{% for item in user_background_theme %}#}
+{#    <body class="{{ item.background_color }}">#}
+{#{% endfor %}#}
+<body>
+{% for item in user_background_theme %}
+    <div class="main-wrapper text-center text-white {{ item.background_color }}">
+{% endfor %}
+{% for obj in user_img %}
+    <img src="/static/uploads_img/{{ obj.image_file }}" alt="" class="img-fluid" id="profile_img">
+{% endfor %}
+<div id="username">@{{ user_name }}</div>
+{% for row in user_links %}
+    <a href="{{ row.link }}" id="mobile-device-link">
+        <div class="link-box-mobile">
+            <div id="link-box-title">
+                {{ row.title }}
+            </div>
+        </div>
+    </a>
+{% endfor %}
+
+<div id="brand">
+    LINKVINE
+</div>
+</div>
+</body>
+</html>

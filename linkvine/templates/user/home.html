@@ -1,0 +1,182 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/css/user/home.css">
+
+    <div class="introduction-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="intro-left">
+                        <div id="intro-slogan">
+                            Grow your <span class="">connection</span> with a single link
+                        </div>
+                        <div id="intro-sub">
+                            Connect and accelerate your network with just one link. LINKVINE is the only platform you
+                            will ever need.
+                        </div>
+
+                        <div style="padding-top: 3rem;">
+                            <a href="{{ url_for('register') }}" id="get-started">
+                                <button class="btn btn-success d-inline">GET STARTED <i
+                                        class="fas fa-arrow-right pl-1"></i></button>
+                            </a>
+                            <a href="#how-it-works" id="btn-success-outline">
+                                <button class="btn btn-success-outline d-inline ml-1 px-4">How it works</button>
+                            </a>
+                            <p class="mt-2" style="font-size: 0.8rem;">Already on LINKVINE? <a
+                                    href="{{ url_for('login') }}"><span
+                                    style="text-decoration: none;">Login here</span></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="intro-right">
+                        <img src="/static/img/undraw_remote_design_team_0hp4.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-features">
+        <div class="container">
+            <div class="row" id="about">
+                <div class="col-md-4 text-center">
+                    <div class="img-wrapper">
+                        <img src="/static/img/undraw_create_f05x.png" alt="" class="img-fluid">
+                    </div>
+                    <h5>Create</h5>
+                    <p>Easily create & manage all your
+                        links in one place: personal website,
+                        store, recent video or social post</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="img-wrapper">
+                        <img src="/static/img/undraw_connected_world_wuay.png" alt="" class="img-fluid">
+                    </div>
+                    <h5>Connect</h5>
+                    <p>Share your link anywhere: Instagram,
+                        YouTube, TikTok, in messengers
+                        or via SMS.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="img-wrapper">
+                        <img src="/static/img/undraw_tabs_jf82.png" alt="" class="img-fluid">
+                    </div>
+                    <h5>Manage</h5>
+                    <p>Create and manage multiple Biolink Pages for your team from a single dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-feature full-page-height">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/static/img/product_example_user2.png" alt="" class="img-fluid" style="width:20.5rem"
+                         id="mobile-feature-phone">
+                </div>
+                <div class="col-md-8 px-5">
+                    <h1>Share and show off your content with various links </h1>
+                    <div class="mt-4"><span class="text-green-dark font-weight-bold">LINK</span><span
+                            class="text-green-light font-weight-bold">VINE</span>
+                        enables you to import content from all your favorite platforms and present it in a
+                        pleasing way.
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/instagram.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right pr-4">Instagram</h2>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/facebook.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right pr-4">Facebook</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/twitter.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right" style="padding-right:4.2rem">Twitter</h2>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/youtube.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right" style="padding-right:3rem">Youtube</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/linkedin.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right pr-5">LinkedIn</h2>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="media-wrapper p-4">
+                                <img src="/static/img/spotify.png" alt="" class="img-fluid float-left">
+                                <h2 class="float-right" style="padding-right: 4.2rem;">Spotify</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="mt-5 font-italic">You get it, any links!</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how" id="how-it-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>How it works</h1>
+
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                        <div class="p-4 bd-highlight">
+                            <div class="square-green-dark mx-auto"></div>
+                        </div>
+                        <div class="p-4 bd-highlight">
+                            <h5>Free access to all features.
+                            </h5>
+                            <p>LINKVINE is 100% free. You can use all the features to your heart's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                        <div class="p-4 bd-highlight">
+                            <div class="square-green-medium mx-auto"></div>
+                        </div>
+                        <div class="p-4 bd-highlight">
+                            <h5>Choose what you want to share</h5>
+                            <p>Easily customize which content you want to share globally.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                        <div class="p-4 bd-highlight">
+                            <div class="square-green-light mx-auto"></div>
+                        </div>
+                        <div class="p-4 bd-highlight">
+                            <h5>Manage your content easily</h5>
+                                <p>Our elegant user interface design made easy for everyone.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="/static/img/undraw_online_test_gba7.png" alt="" class="img-fluid"
+                         style="padding-top:7.3rem">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

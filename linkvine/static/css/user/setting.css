@@ -1,0 +1,55 @@
+body {
+    background-color: #f6f7f9;
+    /*background-color: #eefcef;*/
+}
+
+.wrapper {
+    width: 55%;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+}
+
+.btn-light {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #FFFFFF;
+}
+
+.btn-light:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.btn-dark {
+
+}
+
+.btn-dark:hover {
+    font-weight: 600;
+}
+
+label {
+    color: #586069 !important;
+    font-weight: 500;
+}
+
+.form-control{
+    background-color: rgba(13,12,34,.05) !important;
+    border: none !important;
+}
+
+/** GALAXY S5 **/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+    .wrapper{
+        width: 100%;
+    }
+}
+
+/** PIXEL 2 **/
+@media only screen and (min-device-width: 411px) and (max-device-width: 731px) {
+      .wrapper{
+        width: 100%;
+    }
+}

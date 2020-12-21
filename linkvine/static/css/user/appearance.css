@@ -1,0 +1,83 @@
+.wrapper {
+    /*box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;*/
+    /*    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #f6f7f9;
+}
+
+#img-theme {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#mobile-device {
+    border: 7px solid black;
+    height: 32rem;
+    width: 17rem;
+    border-radius: 35px;
+    /*background: #11998e; */
+    /*background: -webkit-linear-gradient(to right, #38ef7d, #11998e); */
+    /*background: linear-gradient(to right, #38ef7d, #11998e);*/
+    overflow-y: scroll;
+    color:white;
+}
+
+#mobile-device::-webkit-scrollbar {
+    display: none;
+}
+
+#profile_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.link-box-mobile {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+    border-radius: 20px 20px 20px 20px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: white;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.link-box-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+#mobile-device-link:hover {
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+#brand {
+    padding-top: 2rem;
+    font-weight: 700;
+}
+
+#username {
+    font-size: 0.8em;
+    padding-top: 0.6rem;
+    font-weight: 500;
+}
+
+.circle-theme {
+    /*border:1px solid #ddd;*/
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 50%;
+}
+
+#scroll{
+    height:14.7rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+

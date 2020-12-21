@@ -1,0 +1,57 @@
+#profile_img {
+    width: 40rem;
+}
+
+.container {
+    margin-top: 7rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+/** Galaxy s5 **/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+    #profile_img {
+        width: 45rem;
+    }
+
+    .container {
+        margin-top: 50%;
+    }
+
+    .title {
+        font-size: 3.3rem;
+    }
+
+    .sub-title {
+        font-size: 1.5rem;
+    }
+
+    #link {
+        font-size: 1.5rem;
+    }
+}
+
+/** iPhone X **/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    #profile_img {
+        width: 45rem;
+    }
+
+    .container {
+        margin-top: 50%;
+    }
+
+    .title {
+        font-size: 3.3rem;
+    }
+
+    .sub-title {
+        font-size: 1.5rem;
+    }
+
+    #link {
+        font-size: 1.5rem;
+    }
+}

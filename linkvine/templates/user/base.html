@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKVINE</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Fontawsome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/user/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/user/custom.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            {% if current_user.is_authenticated %}
+                <img src="/static/img/ecology.png" width="35" alt="" class="pr-1">
+                <a class="navbar-brand" href="{{ url_for('dashboard_main') }}">linkvine</a>
+            {% else %}
+                <img src="/static/img/ecology.png" width="35" alt="" class="pr-1">
+                <a class="navbar-brand" href="{{ url_for('home') }}">linkvine</a>
+            {% endif %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item">
+                            <a {% if page == 'dashboard' %}class="nav-link active font-weight-bold"
+                               {% else %}class="nav-link"{% endif %}
+                               href="{{ url_for('dashboard_main') }}">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a {% if page == 'appearance' %}class="nav-link active font-weight-bold"
+                               {% else %}class="nav-link"{% endif %}
+                               href="{{ url_for('appearance') }}">Appearance</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+{#                        <li class="nav-item">#}
+{#                            <a class="nav-link" href="#" disabled="disabled">Pricing</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item">#}
+{#                            <a class="nav-link" href="#">Donators</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item">#}
+{#                            <a class="nav-link" href="#">Help</a>#}
+{#                        </li>#}
+                    {% endif %}
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item dropdown font-weight-bold">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                               style="font-weight: 500"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ current_user.username }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('setting') }}">Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}" id="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('register') }}" id="sign-up">Sign Up Free</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} text-center my-4">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+{% block content %}{% endblock %}
+
+<footer>
+    <div class="container mt-5 p-5">
+
+        <div class="text-center text-white">
+            Developed with love by <span class="font-weight-bold">
+            Tjandra
+        </span>
+        </div>
+{#        <div class="row">#}
+{#            <div class="col-md-4">#}
+{#                <h1>Need help with anything?</h1>#}
+{#                <p>Lets hear all about it! Contact us</p>#}
+{#                <div class="social-media">#}
+{#                    <i class="fab fa-instagram fa-2x" id="instagram"></i>#}
+{#                    <i class="fab fa-facebook fa-2x pl-2" id="facebook"></i>#}
+{#                    <i class="fab fa-twitter fa-2x pl-2" id="twitter"></i>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-md-2">#}
+{#                <h5 class="py-4">Company</h5>#}
+{#                <p>Blog</p>#}
+{#                <p>About</p>#}
+{#                <p>Press</p>#}
+{#                <p>Contacts</p>#}
+{#            </div>#}
+{#            <div class="col-md-2">#}
+{#                <h5 class="py-4">Get Started</h5>#}
+{#                <p>Sign Up For Free</p>#}
+{#                <p>Sign In</p>#}
+{#            </div>#}
+{#            <div class="col-md-2">#}
+{#                <h5 class="py-4">Legal</h5>#}
+{#                <p>Terms & Conditions</p>#}
+{#                <p>Privacy Policy</p>#}
+{#            </div>#}
+{#            <div class="col-md-2">#}
+{#                <h5 class="py-4">Support</h5>#}
+{#                <p>FAQs</p>#}
+{#                <p>How it works</p>#}
+{#            </div>#}
+{#        </div>#}
+    </div>
+</footer>
+
+
+<script src="/static/js/MagicScroll.cjs.js"></script>
+
+<script>
+    let magicScroll = new MagicScroll({
+        target: document.querySelector(".scrollableElement"),
+        speed: 80,
+        smooth: 12,
+        current: 0 // position
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

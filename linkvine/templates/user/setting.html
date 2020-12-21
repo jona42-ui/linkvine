@@ -1,0 +1,90 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/css/user/setting.css">
+    <div class="container">
+        <div class="wrapper mx-auto p-4 mt-4">
+            <h2 class="text-center">My Information</h2>
+
+            <form class="needs-validation" method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.username.label(class="form-control-label") }}
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control", value=current_user.username) }}
+                    <small class="form-text text-muted">Change your username.</small>
+                {% endif %}
+
+                {{ form.email.label(class="form-control-label mt-3") }}
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control", value=current_user.email) }}
+                    <small class="form-text text-muted">Change your email address.</small>
+                {% endif %}
+
+                {{ form.phone_number.label(class="form-control-label mt-3") }}
+                {% if form.phone_number.errors %}
+                    {{ form.phone_number(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.phone_number.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.phone_number(class="form-control", value=current_user.phone_number) }}
+                    <small class="form-text text-muted">Change your phone number.</small>
+                {% endif %}
+
+                {{ form.password.label(class="form-control-label mt-3") }}
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="form-control") }}
+                    <small class="form-text text-info">If you do not want to change your password, leave this field
+                        blank.</small>
+                {% endif %}
+
+                {{ form.confirm_password.label(class="form-control-label mt-3") }}
+                {% if form.confirm_password.errors %}
+                    {{ form.confirm_password(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.confirm_password(class="form-control") }}
+                {% endif %}
+
+                {{ form.submit(class="btn btn-block mt-3 btn-dark") }}
+
+            </form>
+        </div>
+
+        <div class="wrapper mx-auto p-4 my-4">
+            <h2 class="text-center">Danger Zone</h2>
+            <form method="POST">
+                <a class="btn btn-block btn-danger mt-3 disabled" href="/user/setting/delete/{{ current_user.id }}"
+                   onclick="return confirm('Are you sure to delete account?')">Delete
+                    my account
+                </a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
