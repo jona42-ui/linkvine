@@ -241,6 +241,29 @@
     transition: 0.25s;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: dimgrey;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: dimgrey;
+
+}
+
+.carousel-indicators li{
+    background-color:dimgrey !important;
+}
+
 /** GALAXY S5 **/
 @media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
     #intro-slogan {
