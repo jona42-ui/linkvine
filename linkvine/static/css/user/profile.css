@@ -105,6 +105,7 @@ body {
     padding-top: 5rem;
     font-weight: 700;
     font-size: 1.5rem;
+    color: white !important;
 }
 
 /** Galaxy s5 **/
@@ -125,7 +126,7 @@ body {
         padding-top: 5rem;
         padding-bottom: 5rem;
         padding-left: 3rem;
-        padding-right:3rem;
+        padding-right: 3rem;
     }
 
     #link-box-title {
