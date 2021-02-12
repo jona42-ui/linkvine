@@ -6,6 +6,10 @@
     width: 15rem;
 }
 
+.main-features {
+    margin-top: -15vh;
+}
+
 .img-wrapper {
     height: 13rem;
 }
@@ -19,14 +23,38 @@
     color: #495057;
 }
 
-.mobile-feature h1{
-    font-weight: 400;
+.join-us{
+    margin-bottom: 10rem;
+}
+
+#join-us-button {
+    background-color: #fd3a5c;
+    color: #fff;
+    border-radius: 100px;
+    padding-top: 15px;
+    height: 4rem;
+    width: 15rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+#join-us-button:hover{
+    font-weight: 600;
+}
+
+#join-us-text-small {
+    font-size: 12px;
+    font-weight: 300;
+    color: #9a9a9a;
+    text-align: center;
+    margin-top:0.5rem;
 }
 
 .introduction-container {
     padding-top: 18vh;
     /*padding-bottom: 12rem;*/
-    height:100%;
+    height: 100%;
     min-height: 100vh;
 }
 
@@ -54,17 +82,23 @@
     background-color: #4caf50 !important;
     /*color: #286731 !important;*/
     color: #ffffff;
-    border: none;
+    border-radius: 100px;
     height: 3.3rem;
     transition: 0.25s;
+    font-weight: 600;
+
 }
 
 .btn-success-outline {
     background: none !important;
-    color: #286731 !important;
-    border: 1px solid #286731;
+    /*color: #286731 !important;*/
+    color: #242424 !important;
+    /*border: 1px solid #286731;*/
+    border: 2px solid #666;
+    border-radius: 100px;
     height: 3.3rem;
     transition: 0.25s;
+    font-weight: 600;
 }
 
 #btn-success-outline:hover {
@@ -243,8 +277,8 @@
     transition: 0.25s;
 }
 
-.how{
-padding-top:15vh;
+.how {
+    padding-top: 15vh;
     padding-bottom: 8vh;
 }
 
@@ -260,8 +294,26 @@ padding-top:15vh;
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='dimgrey' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
-.carousel-indicators li{
-    background-color:dimgrey !important;
+
+.carousel-indicators li {
+    background-color: dimgrey !important;
+}
+
+.carousel-item img {
+    border-radius: 10px;
+}
+
+.carousel {
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.carousel-indicators {
+    transform: translateY(7vh);
+}
+
+.carousel-indicators li {
+    background-color: #4caf50 !important;
 }
 
 /** GALAXY S5 **/
@@ -291,40 +343,40 @@ padding-top:15vh;
     .mobile-feature h1 {
         font-size: 2rem;
         line-height: 2.4rem;
-        padding-top:1rem;
+        padding-top: 1rem;
     }
 
-    .mobile-feature img{
-        margin:auto;
+    .mobile-feature img {
+        margin: auto;
     }
 
-    .media-wrapper h2{
+    .media-wrapper h2 {
         font-size: 1.5rem;
         padding-top: 0.5rem;
     }
 
-    .media-wrapper{
+    .media-wrapper {
         margin-top: 1rem;
     }
 
-    .how h1{
+    .how h1 {
         font-size: 2rem;
         text-align: center;
         padding-top: 2rem;
     }
 
-    .how img{
+    .how img {
         display: none;
     }
 
-    footer h1{
+    footer h1 {
         font-size: 2rem;
     }
 }
 
 /** PIXEL 2 **/
 @media only screen and (min-device-width: 411px) and (max-device-width: 731px) {
-     #intro-slogan {
+    #intro-slogan {
         font-size: 2.2rem;
         line-height: 3rem;
     }
@@ -349,33 +401,33 @@ padding-top:15vh;
     .mobile-feature h1 {
         font-size: 2rem;
         line-height: 2.4rem;
-        padding-top:1rem;
+        padding-top: 1rem;
     }
 
-    #mobile-feature-phone{
-        margin:1.8rem;
+    #mobile-feature-phone {
+        margin: 1.8rem;
     }
 
-    .media-wrapper h2{
+    .media-wrapper h2 {
         font-size: 1.5rem;
         padding-top: 0.5rem;
     }
 
-    .media-wrapper{
+    .media-wrapper {
         margin-top: 1rem;
     }
 
-    .how h1{
+    .how h1 {
         font-size: 2rem;
         text-align: center;
         padding-top: 2rem;
     }
 
-    .how img{
+    .how img {
         display: none;
     }
 
-    footer h1{
+    footer h1 {
         font-size: 2rem;
     }
 }

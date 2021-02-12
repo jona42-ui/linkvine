@@ -3,6 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+.font-noto {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .font-nunito {
     font-family: 'Nunito', sans-serif;
@@ -51,7 +60,7 @@ html {
 
 .navbar-brand {
     /*color: #4caf50 !important;*/
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     text-transform: uppercase;
     /*font-family: 'viga', cursive;*/
 }
@@ -76,20 +85,21 @@ html {
 #sign-up {
     /*background: #93c47d !important;*/
     /*color: #286731 !important;*/
-    background-color: #0d0c23;
+    /*background-color: #0d0c23;*/
+    background-color: #fd3a5c;
     color: #fff;
-    /*border-radius: 20px;*/
-    border-radius: .25rem;
+    border-radius: 100px;
     height: 48px;
     padding: 12px 24px;
-    /*padding-right: 1rem;*/
-    /*padding-left: 1rem;*/
+
 }
 
 #login {
     background-color: #ffffff;
-    border-radius: .25rem;
-    border: 2px solid #0d0c23;
+    /*border-radius: .25rem;*/
+    border-radius: 100px;
+    /*border: 2px solid #0d0c23;*/
+    border: 1px solid #9a9a9a;
     height: 48px;
     padding: 10px 24px;
     font-weight: 600 !important;
@@ -192,7 +202,7 @@ footer {
         padding-left: unset;
     }
 
-     .dropdown-item {
+    .dropdown-item {
         text-align: center !important;
 
     }

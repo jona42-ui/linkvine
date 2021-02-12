@@ -17,15 +17,15 @@
 
                         <div style="padding-top: 3rem;">
                             <a href="{{ url_for('register') }}" id="get-started">
-                                <button class="btn btn-success d-inline">GET STARTED <i
+                                <button class="btn btn-success d-inline px-4">GET STARTED <i
                                         class="fas fa-arrow-right pl-1"></i></button>
                             </a>
                             <a href="#how-it-works" id="btn-success-outline">
                                 <button class="btn btn-success-outline d-inline ml-1 px-4">How it works</button>
                             </a>
-                            <p class="mt-2" style="font-size: 0.8rem;">Already on LINKVINE? <a
+                            <p class="mt-2" style="font-size: 0.8rem;font-weight: 300">Already on LINKVINE? <a
                                     href="{{ url_for('login') }}"><span
-                                    style="text-decoration: none;">Login here</span></a></p>
+                                    style="text-decoration: none;font-weight: 400">Login here</span></a></p>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
             <div class="row" id="about">
                 <div class="col-md-4 text-center">
                     <div class="img-wrapper">
-                        <img src="/static/img/undraw_create_f05x.png" alt="" class="img-fluid">
+                        <img src="/static/img/undraw_design_team_af2y (1).png" alt="" class="img-fluid">
                     </div>
                     <h5>Create</h5>
                     <p>Easily create & manage all your
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="img-wrapper">
-                        <img src="/static/img/undraw_connected_world_wuay.png" alt="" class="img-fluid">
+                        <img src="/static/img/undraw_Traveling_re_weve.png" alt="" class="img-fluid">
                     </div>
                     <h5>Connect</h5>
                     <p>Share your link anywhere: Instagram,
@@ -61,7 +61,8 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="img-wrapper">
-                        <img src="/static/img/undraw_tabs_jf82.png" alt="" class="img-fluid">
+                        <img src="/static/img/undraw_content_team_3epn.png" style="margin-bottom:-12rem !important;"
+                             alt="" class="img-fluid">
                     </div>
                     <h5>Manage</h5>
                     <p>Create and manage multiple Biolink Pages for your team from a single dashboard.</p>
@@ -173,15 +174,20 @@
                 </div>
                 <div class="col-md-6" style="margin-top:6rem">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="/static/img/showcase_1.PNG" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/static/img/showcase_2.PNG" alt="Second slide">
+                                <img class="d-block w-100" src="/static/img/showcase_1.PNG" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/static/img/showcase_3.PNG" alt="Third slide">
+                                <img class="d-block w-100" src="/static/img/showcase_1.PNG" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -197,6 +203,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="join-us mt-5">
+        <div class="container text-center">
+            <img src="/static/img/undraw_join_of2w.png" width="600" alt="" class="img-fluid mb-3">
+
+            <h1 class="mb-4">Get started with linkvine today</h1>
+
+            <a class="nav-link" href="{{ url_for('register') }}" id="join-us-button">Try It Free</a>
+
+            <div id="join-us-text-small">
+                No payment required
+            </div>
+
         </div>
     </div>
 
