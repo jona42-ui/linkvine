@@ -10,7 +10,7 @@ import secrets
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676de280ba245'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'.
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:{}@{}/{}'.format(secrets.dbpass, secrets.dbhost, secrets.dbname)
 
 app.config['UPLOAD_FOLDER'] = 'linkvine/static/uploads_img/'
