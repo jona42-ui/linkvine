@@ -85,16 +85,18 @@ def profile(username):
 
     user_name = user_obj.username
     user_links = user_obj.links.filter_by(visibility="shown")
-    user_img = user_obj.files
+    # user_img = user_obj.files
     user_background_theme = user_obj.pages
 
     # AWS S3 BUCKET
     s3 = boto3.resource('s3')
-    s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
+    s3_object_name = s3.Object('s3-linkvine', user_obj.files[0].image_file)
 
     s3_object_key = s3_object_name.key
 
-    return render_template('user/profile.html', user_links=user_links, user_name=user_name, user_img=user_img,
+    print(s3_object_key)
+
+    return render_template('user/profile.html', user_links=user_links, user_name=user_name,
                            user_background_theme=user_background_theme, s3_object_key=s3_object_key)
 
 

@@ -23,9 +23,12 @@
 {% for item in user_background_theme %}
     <div class="main-wrapper text-center text-white {{ item.background_color }}">
 {% endfor %}
-{% for obj in user_img %}
-    <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt="" class="img-fluid" id="profile_img">
-{% endfor %}
+{#{% for obj in user_img %}#}
+{#    <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt="" class="img-fluid" id="profile_img">#}
+{#{% endfor %}#}
+<img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt="" class="img-fluid"
+     id="profile_img">
+
 <div id="username">@{{ user_name }}</div>
 {% for row in user_links %}
     <a href="{{ row.link }}" id="mobile-device-link">
