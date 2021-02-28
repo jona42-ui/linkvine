@@ -24,7 +24,7 @@ def dashboard_main():
     user_background_theme = current_user.pages
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAWB3SY2HKSJK4A2GT', aws_secret_access_key='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')
+    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
     s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
 
     s3_object_key = s3_object_name.key
@@ -89,7 +89,7 @@ def profile(username):
     user_background_theme = user_obj.pages
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAWB3SY2HKSJK4A2GT', aws_secret_access_key='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')
+    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
     s3_object_name = s3.Object('s3-linkvine', user_obj.files[0].image_file)
 
     s3_object_key = s3_object_name.key
@@ -112,7 +112,7 @@ def appearance():
     print(current_user.files[0].image_file)
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAWB3SY2HKSJK4A2GT', aws_secret_access_key='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')
+    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
     s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
 
     s3_object_key = s3_object_name.key
