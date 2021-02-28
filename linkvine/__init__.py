@@ -6,6 +6,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_mail import Mail
 import secrets
+import boto3
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676de280ba245'
@@ -13,10 +14,11 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676de280ba245'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:{}@{}/{}'.format(secrets.dbpass, secrets.dbhost, secrets.dbname)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
+# ==== AWS ====
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:G0472521uG0472521u@database-linkvine.c7q3tzsocafo.ap-southeast-1.rds.amazonaws.com/database-linkvine'
 
-
 app.config['UPLOAD_FOLDER'] = 'linkvine/static/uploads_img/'
+
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True

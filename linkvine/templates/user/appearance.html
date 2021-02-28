@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col-md-4" style="border-right: 1px solid #ddd;">
                                     {% for obj in user_img %}
-                                        <img src="/static/uploads_img/{{ obj.image_file }}" alt=""
+                                        <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt=""
                                              class="m-4"
                                              id="img-theme">
                                     {% endfor %}
@@ -96,7 +96,7 @@
                             <div id="mobile-device" class="p-3 text-center mx-auto {{ item.background_color }}">
                         {% endfor %}
                         {% for obj in user_img %}
-                            <img src="/static/uploads_img/{{ obj.image_file }}" alt="" class="img-fluid"
+                            <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt="" class="img-fluid"
                                  id="profile_img">
                         {% endfor %}
 
