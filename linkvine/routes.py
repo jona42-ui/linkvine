@@ -24,13 +24,14 @@ def dashboard_main():
     user_background_theme = current_user.pages
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
+    s3 = boto3.resource('s3')
     s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
 
     s3_object_key = s3_object_name.key
 
     return render_template('user/dashboard.html', all_data=all_data, page="dashboard", user_img=user_img,
-                           visible_data=visible_data, user_background_theme=user_background_theme, s3_object_key=s3_object_key)
+                           visible_data=visible_data, user_background_theme=user_background_theme,
+                           s3_object_key=s3_object_key)
 
 
 @app.route('/user/dashboard/edit', methods=['GET', 'POST'])
@@ -89,7 +90,7 @@ def profile(username):
     user_background_theme = user_obj.pages
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
+    s3 = boto3.resource('s3')
     s3_object_name = s3.Object('s3-linkvine', user_obj.files[0].image_file)
 
     s3_object_key = s3_object_name.key
@@ -112,13 +113,14 @@ def appearance():
     print(current_user.files[0].image_file)
 
     # AWS S3 BUCKET
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTWE5WX36QN36XA', aws_secret_access_key='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')
+    s3 = boto3.resource('s3')
     s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
 
     s3_object_key = s3_object_name.key
 
     return render_template('user/appearance.html', page="appearance", visible_data=visible_data, user_img=user_img,
-                           background_colors=background_colors, user_background_theme=user_background_theme, s3_object_key=s3_object_key)
+                           background_colors=background_colors, user_background_theme=user_background_theme,
+                           s3_object_key=s3_object_key)
 
 
 @app.route('/user/appearance/edit/background/<theme_name>', methods=["GET", "POST"])
@@ -319,6 +321,7 @@ def send_reset_email(user):
     '''
 
     mail.send(msg)
+
 
 # Input email
 @app.route('/reset_password', methods=['GET', 'POST'])
