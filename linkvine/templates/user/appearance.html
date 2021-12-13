@@ -1,124 +1,160 @@
-{% extends "user/base.html" %}
-{% block content %}
-    <link rel="stylesheet" type="text/css" href="/static/css/user/appearance.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/user/user-customization.css">
+{% extends "user/base.html" %} {% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/user/appearance.css" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/static/css/user/user-customization.css"
+/>
 
+<div class="container">
+  <h2 class="my-3">My Page</h2>
 
-    <div class="container">
-        <h2 class="my-3">My Page</h2>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="profile mb-3">
-                    <div class="wrapper p-4">
-                        <h4>Profile</h4>
-                        <form method="POST" enctype="multipart/form-data" action="/user/appearance/upload_img">
-                            <div class="row">
-                                <div class="col-md-4" style="border-right: 1px solid #ddd;">
-                                    {% for obj in user_img %}
-                                        <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt=""
-                                             class="m-4"
-                                             id="img-theme">
-                                    {% endfor %}
-                                </div>
-                                <div class="col-md-8">
-                                    <p>Your photo gives others clues about your personality. Think about what message
-                                        you want to give to other people and choose your photo accordingly.</p>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile04"
-                                                   aria-describedby="inputGroupFileAddon04" name="file-img">
-                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="submit"
-                                                    id="inputGroupFileAddon04">Upload
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="profile mb-3">
+        <div class="wrapper p-4">
+          <h4>Profile</h4>
+          <form
+            method="POST"
+            enctype="multipart/form-data"
+            action="/user/appearance/upload_img"
+          >
+            <div class="row">
+              <div class="col-md-4" style="border-right: 1px solid #ddd">
+                {% for obj in user_img %}
+                <img
+                  src="/static/uploads_img/{{obj.image_file}}"
+                  alt=""
+                  class="m-4"
+                  id="img-theme"
+                />
+                {% endfor %}
+              </div>
+              <div class="col-md-8">
+                <p>
+                  Your photo gives others clues about your personality. Think
+                  about what message you want to give to other people and choose
+                  your photo accordingly.
+                </p>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      id="inputGroupFile04"
+                      aria-describedby="inputGroupFileAddon04"
+                      name="file-img"
+                    />
+                    <label class="custom-file-label" for="inputGroupFile04"
+                      >Choose file</label
+                    >
+                  </div>
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="submit"
+                      id="inputGroupFileAddon04"
+                    >
+                      Upload
+                    </button>
+                  </div>
                 </div>
-
-                <div class="background my-3">
-                    <div class="wrapper p-4">
-                        <h4>Theme</h4>
-                        <div class="row" id="scroll">
-                            {% for row in background_colors %}
-                                <form method="POST"
-                                      action="/user/appearance/edit/background/{{ row.background_color }}">
-                                    <div class="col-md-4">
-                                        {% for item in user_background_theme %}
-                                            {% if item.background_color == row.background_color %}
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="{{ row.background_color }}"
-                                                           id="{{ row.background_color }}"
-                                                           value="{{ row.background_color }}"
-                                                           onchange="this.form.submit()" checked>
-
-                                                    <label class="form-check-label">
-                                                        <div class="circle-theme img-thumbnail m-2 {{ row.background_color }} mx-auto"></div>
-                                                    </label>
-                                                </div>
-                                            {% else %}
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="{{ row.background_color }}"
-                                                           id="{{ row.background_color }}"
-                                                           value="{{ row.background_color }}"
-                                                           onchange="this.form.submit()">
-
-                                                    <label class="form-check-label">
-                                                        <div class="circle-theme img-thumbnail m-2 {{ row.background_color }} mx-auto"></div>
-                                                    </label>
-                                                </div>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </form>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="wrapper p-4">
-                    <div class="wrapper-mobile">
-                        <div class="sub-title text-center">
-                            <h5>Preview</h5>
-                        </div>
-                        {% for item in user_background_theme %}
-                            <div id="mobile-device" class="p-3 text-center mx-auto {{ item.background_color }}">
-                        {% endfor %}
-                        {% for obj in user_img %}
-                            <img src="https://s3-linkvine.s3-ap-southeast-1.amazonaws.com/{{ s3_object_key }}" alt="" class="img-fluid"
-                                 id="profile_img">
-                        {% endfor %}
-
-                        <div id="username">@{{ current_user.username }}</div>
-                        {% for row in visible_data %}
-                            <a href="{{ row.link }}" id="mobile-device-link">
-                                <div class="link-box-mobile">
-                                    <div id="link-box-title">
-                                        {{ row.title }}
-                                    </div>
-                                </div>
-                            </a>
-                        {% endfor %}
-
-                        <div id="brand">
-                            LINKVINE
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </form>
         </div>
+      </div>
+
+      <div class="background my-3">
+        <div class="wrapper p-4">
+          <h4>Theme</h4>
+          <div class="row" id="scroll">
+            {% for row in background_colors %}
+            <form
+              method="POST"
+              action="/user/appearance/edit/background/{{ row.background_color }}"
+            >
+              <div class="col-md-4">
+                {% for item in user_background_theme %} {% if
+                item.background_color == row.background_color %}
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="{{ row.background_color }}"
+                    id="{{ row.background_color }}"
+                    value="{{ row.background_color }}"
+                    onchange="this.form.submit()"
+                    checked
+                  />
+
+                  <label class="form-check-label">
+                    <div
+                      class="circle-theme img-thumbnail m-2 {{ row.background_color }} mx-auto"
+                    ></div>
+                  </label>
+                </div>
+                {% else %}
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="{{ row.background_color }}"
+                    id="{{ row.background_color }}"
+                    value="{{ row.background_color }}"
+                    onchange="this.form.submit()"
+                  />
+
+                  <label class="form-check-label">
+                    <div
+                      class="circle-theme img-thumbnail m-2 {{ row.background_color }} mx-auto"
+                    ></div>
+                  </label>
+                </div>
+                {% endif %} {% endfor %}
+              </div>
+            </form>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="col-md-6">
+      <div class="wrapper p-4">
+        <div class="wrapper-mobile">
+          <div class="sub-title text-center">
+            <h5>Preview</h5>
+          </div>
+          {% for item in user_background_theme %}
+          <div
+            id="mobile-device"
+            class="p-3 text-center mx-auto {{ item.background_color }}"
+          >
+            {% endfor %} {% for obj in user_img %}
+            <img
+              src="/static/uploads_img/{{obj.image_file}}"
+              alt=""
+              class="img-fluid"
+              id="profile_img"
+            />
+            {% endfor %}
+
+            <div id="username">@{{ current_user.username }}</div>
+            {% for row in visible_data %}
+            <a href="{{ row.link }}" id="mobile-device-link">
+              <div class="link-box-mobile">
+                <div id="link-box-title">{{ row.title }}</div>
+              </div>
+            </a>
+            {% endfor %}
+
+            <div id="brand">LINKVINE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

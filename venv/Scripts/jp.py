@@ -1,4 +1,4 @@
-#!c:\users\tjandra putra\documents\github\linkvine-production\venv\scripts\python.exe
+#!C:\Users\Andy\Documents\Github\linkvine-heroku-production\venv\Scripts\python.exe
 
 import sys
 import json

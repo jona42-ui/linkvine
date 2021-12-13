@@ -1,324 +1,321 @@
 .container-fluid {
-    height: 4rem;
-    /*background-color: #3a3a3a;*/
-    /*background-color: #f3f3f4;*/
-    background-color: #D3D3D3;
-    /*background-image: linear-gradient(66deg, rgba(37, 37, 37, 0.05) 0%, rgba(37, 37, 37, 0.05) 33.333%, rgba(89, 89, 89, 0.05) 33.333%, rgba(89, 89, 89, 0.05) 66.666%, rgba(234, 234, 234, 0.05) 66.666%, rgba(234, 234, 234, 0.05) 99.999%), linear-gradient(130deg, rgba(104, 104, 104, 0.05) 0%, rgba(104, 104, 104, 0.05) 33.333%, rgba(246, 246, 246, 0.05) 33.333%, rgba(246, 246, 246, 0.05) 66.666%, rgba(178, 178, 178, 0.05) 66.666%, rgba(178, 178, 178, 0.05) 99.999%), linear-gradient(72deg, rgba(168, 168, 168, 0.05) 0%, rgba(168, 168, 168, 0.05) 33.333%, rgba(73, 73, 73, 0.05) 33.333%, rgba(73, 73, 73, 0.05) 66.666%, rgba(253, 253, 253, 0.05) 66.666%, rgba(253, 253, 253, 0.05) 99.999%), linear-gradient(139deg, rgba(241, 241, 241, 0.05) 0%, rgba(241, 241, 241, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 66.666%, rgba(100, 100, 100, 0.05) 66.666%, rgba(100, 100, 100, 0.05) 99.999%), linear-gradient(111deg, rgba(65, 65, 65, 0.05) 0%, rgba(65, 65, 65, 0.05) 33.333%, rgba(223, 223, 223, 0.05) 33.333%, rgba(223, 223, 223, 0.05) 66.666%, rgba(50, 50, 50, 0.05) 66.666%, rgba(50, 50, 50, 0.05) 99.999%), linear-gradient(90deg, rgb(41, 89, 88), rgb(80, 210, 116));*/
+  height: 4rem;
+  /*background-color: #3a3a3a;*/
+  /*background-color: #f3f3f4;*/
+  background-color: #d3d3d3;
+  /*background-image: linear-gradient(66deg, rgba(37, 37, 37, 0.05) 0%, rgba(37, 37, 37, 0.05) 33.333%, rgba(89, 89, 89, 0.05) 33.333%, rgba(89, 89, 89, 0.05) 66.666%, rgba(234, 234, 234, 0.05) 66.666%, rgba(234, 234, 234, 0.05) 99.999%), linear-gradient(130deg, rgba(104, 104, 104, 0.05) 0%, rgba(104, 104, 104, 0.05) 33.333%, rgba(246, 246, 246, 0.05) 33.333%, rgba(246, 246, 246, 0.05) 66.666%, rgba(178, 178, 178, 0.05) 66.666%, rgba(178, 178, 178, 0.05) 99.999%), linear-gradient(72deg, rgba(168, 168, 168, 0.05) 0%, rgba(168, 168, 168, 0.05) 33.333%, rgba(73, 73, 73, 0.05) 33.333%, rgba(73, 73, 73, 0.05) 66.666%, rgba(253, 253, 253, 0.05) 66.666%, rgba(253, 253, 253, 0.05) 99.999%), linear-gradient(139deg, rgba(241, 241, 241, 0.05) 0%, rgba(241, 241, 241, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 66.666%, rgba(100, 100, 100, 0.05) 66.666%, rgba(100, 100, 100, 0.05) 99.999%), linear-gradient(111deg, rgba(65, 65, 65, 0.05) 0%, rgba(65, 65, 65, 0.05) 33.333%, rgba(223, 223, 223, 0.05) 33.333%, rgba(223, 223, 223, 0.05) 66.666%, rgba(50, 50, 50, 0.05) 66.666%, rgba(50, 50, 50, 0.05) 99.999%), linear-gradient(90deg, rgb(41, 89, 88), rgb(80, 210, 116));*/
 }
 
-
 body {
-    background-color: #f6f7f9;
+  background-color: #f6f7f9;
 }
 
 .banner-wrapper {
-    border-radius: 20px;
-    background: #ffffff;
-    margin-top: -2.9rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 20px;
+  background: #ffffff;
+  margin-top: -2.9rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .title {
-    color: #343a40 !important;
-    /*color: #ffffff;*/
-    font-weight: 500;
-    font-size: 1rem;
+  color: #343a40 !important;
+  /*color: #ffffff;*/
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-
 #link {
-    text-underline: black;
-    color: #343a40 !important;
-    font-weight: 400 !important;
-    box-shadow: 0 1px 0 0 #00b4ba !important;
+  text-underline: black;
+  color: #343a40 !important;
+  font-weight: 400 !important;
+  box-shadow: 0 1px 0 0 #00b4ba !important;
 }
 
 #link:hover {
-    text-decoration: none;
-    font-weight: 500 !important;
+  text-decoration: none;
+  font-weight: 500 !important;
 }
 
 .text-color-sub {
-    color: rgba(0, 0, 0, 0.38)
+  color: rgba(0, 0, 0, 0.38);
 }
 
 .text-apocad {
-    color: #00b4ba;
+  color: #00b4ba;
 }
 
 .link-box {
-    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;*/
-    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-    border-radius: 20px 20px 20px 20px !important;
-    background-color: white;
-    margin-top: 1rem;
-    padding: 0.6rem;
-    word-break: break-all;
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;*/
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  border-radius: 20px 20px 20px 20px !important;
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  word-break: break-all;
 }
 
 .link-box:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .main-wrapper {
-    background-color: #ffffff;
-    border-radius: 20px !important;
-    /*box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px !important;*/
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    margin-top: 1.2rem;
-    margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 20px !important;
+  /*box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px !important;*/
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 #scroll {
-    height: 40rem;
-    overflow: scroll;
-    overflow-x: hidden;
+  height: 40rem;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .btn-diamond {
-    background-color: #00b4ba;
-    color: white;
-    font-weight: 600;
-    height: 3rem;
-    border-radius: 25px !important;
+  background-color: #00b4ba;
+  color: white;
+  font-weight: 600;
+  height: 3rem;
+  border-radius: 25px !important;
 }
 
 .btn-success {
-    background: #93c47d !important;
-    color: #286731 !important;
-    height: 3rem;
-    border-radius: 25px !important;
-    border: none;
-    font-weight: 600;
+  background: #93c47d !important;
+  color: #286731 !important;
+  height: 3rem;
+  border-radius: 25px !important;
+  border: none;
+  font-weight: 600;
 }
 
 .btn-dark {
-    height: 3rem;
-    border-radius: 25px !important;
+  height: 3rem;
+  border-radius: 25px !important;
 }
 
 .btn-dark:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .btn-success:hover {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .btn-grey {
-    background-color: #6c757d;
-    color: white;
-    height: 3rem;
-    border-radius: 25px !important;
+  background-color: #6c757d;
+  color: white;
+  height: 3rem;
+  border-radius: 25px !important;
 }
 
 .btn-grey:hover {
-    font-weight: 600;
-    color: white;
+  font-weight: 600;
+  color: white;
 }
 
 .btn-warning {
-    height: 3rem;
-    border-radius: 25px !important;
-    padding-top: 0.65rem;
+  height: 3rem;
+  border-radius: 25px !important;
+  padding-top: 0.65rem;
 }
 
 .btn-warning:hover {
-    font-weight: 600;
-
+  font-weight: 600;
 }
 
-
 .text-diamond {
-    color: #00b4ba !important;
+  color: #00b4ba !important;
 }
 
 #mobile-device {
-    border: 7px solid black;
-    height: 32rem;
-    width: 17rem;
-    border-radius: 35px;
-    overflow-y: scroll;
-    color: white;
+  border: 7px solid black;
+  height: 32rem;
+  width: 17rem;
+  border-radius: 35px;
+  overflow-y: scroll;
+  color: white;
 }
 
 #mobile-device::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .row {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 #profile_img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 #username {
-    font-size: 0.8em;
-    padding-top: 0.6rem;
-    font-weight: 500;
+  font-size: 0.8em;
+  padding-top: 0.6rem;
+  font-weight: 500;
 }
 
 .link-box-mobile {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
-    border-radius: 20px 20px 20px 20px !important;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 1rem;
-    padding: 0.5rem;
-    color: white;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+  border-radius: 20px 20px 20px 20px !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .link-box-mobile:hover {
-    background-color: rgba(0, 0, 0, 0.7) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 #mobile-device-link:hover {
-    text-decoration: none !important;
-    font-weight: 600 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
 }
 
 #brand {
-    padding-top: 2rem;
-    font-weight: 700;
+  padding-top: 2rem;
+  font-weight: 700;
 }
 
-
 .bg-green-dark {
-    background-color: #009688 !important;
+  background-color: #009688 !important;
 }
 
 .bg-green-medium {
-    background-color: #4caf50 !important;
+  background-color: #4caf50 !important;
 }
 
 .bg-green-light {
-    background-color: #8abb17 !important;
+  background-color: #8abb17 !important;
 }
 
-
 .blurred-bg-modal {
-    background-color: rgba(0, 0, 0, .4) !important;
-    backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  /* backdrop-filter: blur(10px); */
 }
 
 .modal-content {
-    border-radius: 15px;
+  border-radius: 15px;
 }
 
 .form-control {
-    background-color: rgba(13, 12, 34, .05) !important;
-    border: none !important;
+  background-color: rgba(13, 12, 34, 0.05) !important;
+  border: none !important;
 }
 
 .modal-footer {
-    border-top: none !important;
+  border-top: none !important;
 }
 
 .dot {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 #copy-icon {
-    color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #copy-icon:hover {
-    color: rgba(0, 0, 0, 0.8)
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .popup:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+  visibility: visible;
+  opacity: 1;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 .popup .tooltiptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-    transition: opacity 0.3s;
-    font-size: 0.8rem;
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
 }
 
 /* The actual popup */
 .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-    transition: opacity 0.3s;
-    font-size: 0.8rem;
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*@media only screen and (min-device-width: 411px) and (max-device-width: 731px) {*/

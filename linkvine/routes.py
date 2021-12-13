@@ -23,15 +23,8 @@ def dashboard_main():
     user_img = current_user.files
     user_background_theme = current_user.pages
 
-    # AWS S3 BUCKET
-    s3 = boto3.resource('s3')
-    s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
-
-    s3_object_key = s3_object_name.key
-
     return render_template('user/dashboard.html', all_data=all_data, page="dashboard", user_img=user_img,
-                           visible_data=visible_data, user_background_theme=user_background_theme,
-                           s3_object_key=s3_object_key)
+                           visible_data=visible_data, user_background_theme=user_background_theme)
 
 
 @app.route('/user/dashboard/edit', methods=['GET', 'POST'])
@@ -86,19 +79,12 @@ def profile(username):
 
     user_name = user_obj.username
     user_links = user_obj.links.filter_by(visibility="shown")
-    # user_img = user_obj.files
+    user_img = user_obj.files[0].image_file
+
     user_background_theme = user_obj.pages
 
-    # AWS S3 BUCKET
-    s3 = boto3.resource('s3')
-    s3_object_name = s3.Object('s3-linkvine', user_obj.files[0].image_file)
-
-    s3_object_key = s3_object_name.key
-
-    print(s3_object_key)
-
     return render_template('user/profile.html', user_links=user_links, user_name=user_name,
-                           user_background_theme=user_background_theme, s3_object_key=s3_object_key)
+                           user_background_theme=user_background_theme, user_img=user_img)
 
 
 @app.route('/user/appearance', methods=['GET', 'POST'])
@@ -112,15 +98,8 @@ def appearance():
     print(user_img)
     print(current_user.files[0].image_file)
 
-    # AWS S3 BUCKET
-    s3 = boto3.resource('s3')
-    s3_object_name = s3.Object('s3-linkvine', current_user.files[0].image_file)
-
-    s3_object_key = s3_object_name.key
-
     return render_template('user/appearance.html', page="appearance", visible_data=visible_data, user_img=user_img,
-                           background_colors=background_colors, user_background_theme=user_background_theme,
-                           s3_object_key=s3_object_key)
+                           background_colors=background_colors, user_background_theme=user_background_theme)
 
 
 @app.route('/user/appearance/edit/background/<theme_name>', methods=["GET", "POST"])
@@ -166,13 +145,9 @@ def appearance_upload_img():
                 uploaded_file = unique_file_name
                 current_user.files[0].image_file = uploaded_file
                 uploaded_file = request.files['file-img']
-                # uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], unique_file_name))
+                uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], unique_file_name))
 
                 db.session.commit()
-
-                # AWS S3 BUCKET
-                s3 = boto3.client('s3')
-                s3.upload_fileobj(uploaded_file, 's3-linkvine', unique_file_name)
 
                 flash("Your profile image has been changed.", "success")
 
@@ -197,9 +172,7 @@ def appearance_upload_img():
                 db.session.add(db_file_saved)
                 db.session.commit()
 
-                # AWS S3 BUCKET
-                s3 = boto3.client('s3')
-                s3.upload_fileobj(uploaded_file, 's3-linkvine', unique_file_name)
+        
 
     return redirect(url_for('appearance'))
 

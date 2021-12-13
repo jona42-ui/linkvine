@@ -12,18 +12,19 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676de280ba245'
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:{}@{}/{}'.format(secrets.dbpass, secrets.dbhost, secrets.dbname)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-
-# ==== AWS ====
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:G0472521uG0472521u@database-linkvine.c7q3tzsocafo.ap-southeast-1.rds.amazonaws.com/database-linkvine'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 app.config['UPLOAD_FOLDER'] = 'linkvine/static/uploads_img/'
 
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+
+app.config['MAIL_USERNAME'] = 'linkvine.me@gmail.com'
+app.config['MAIL_PASSWORD'] = 'linkvinelinkvine'
+
+# app.config['MAIL_USERNAME'] = os.getenv('EMAIL_USER')
+# app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
 
 db = SQLAlchemy(app)  # Database instance
 bcrypt = Bcrypt(app) 
