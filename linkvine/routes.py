@@ -7,7 +7,6 @@ from linkvine.forms import RegistrationForm, LoginForm, SettingForm, RequestRese
 from linkvine.models import User, Link, Files, AdminAppearance, Page
 from flask_login import login_user, logout_user, current_user, login_required
 from flask_mail import Message
-import boto3
 
 
 @app.route('/')

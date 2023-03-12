@@ -6,7 +6,6 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_mail import Mail
 import secrets
-import boto3
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676de280ba245'
