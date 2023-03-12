@@ -1,6 +1,6 @@
 from linkvine import db, login_manager, app
 from flask_login import UserMixin
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous.url_safe import URLSafeTimedSerializer as Serializer
 
 
 @login_manager.user_loader
@@ -70,3 +70,8 @@ class AdminAppearance(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     background_color = db.Column(db.String(1000), nullable=True)
     background_image = db.Column(db.String(1000), nullable=True)
+
+
+# Create all tables inside app context
+with app.app_context():
+    db.create_all()

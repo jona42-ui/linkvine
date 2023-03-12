@@ -97,6 +97,7 @@ def appearance():
 
     print(user_img)
     print(current_user.files[0].image_file)
+    print(AdminAppearance.query.all())
 
     return render_template('user/appearance.html', page="appearance", visible_data=visible_data, user_img=user_img,
                            background_colors=background_colors, user_background_theme=user_background_theme)
